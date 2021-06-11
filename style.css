@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size:16px;
+  line-height:1.5;
+  margin:0 auto;
+  max-width:728px;
+}
+
+main {
+  padding:1em;
+}
+
+header {
+  padding:1em 1em 0;
+}
+
+nav {
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+nav a {
+  margin-right:1em;
+  margin-bottom:.5em;
+}
+
+article {
+  margin-bottom:2em
+}
+
+p {
+  padding-bottom: 15px;
+}
+ 
+blockquote {
+  display:block;
+  font-style:italic;
+  border-left:4px solid #00000014;
+  padding-left:1em;
+  margin-bottom:1em
+}
+.tags {
+  display: block;
+}
+
+.highlight {
+  background-color: #f0f0f0;
+  overflow-x: scroll;
+  margin-bottom: 15px;
+}

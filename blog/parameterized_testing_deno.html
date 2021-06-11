@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,user-scalable=yes,width=device-width">
+  <meta name="description" content="zach's website">
+  <link rel="canonical" href="https://zach.sexy/blog/parameterized_testing_deno.html"/>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙃</text></svg>">
+
+  <title>Zach's site! 👋</title>
+  <!-- Panelbear Analytics - We respect your privacy -->
+  <script async src="https://cdn.panelbear.com/analytics.js?site=EjJte2iAepH"></script>
+  <script>
+    window.panelbear = window.panelbear || function () { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+    panelbear('config', { site: 'EjJte2iAepH' });
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">home</a>
+      <a href="https://github.com/zachauten">github</a>
+      <a href="https://www.linkedin.com/in/zachauten/">linkedin</a>
+      <a href="https://api.zachauten.com/resume">resume</a>
+      <a href="/contact.html">contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <article>
+      <div class="title">
+        <h1>Parameterized testing in Deno</h1>
+        <time datetime="2021-09-21">Published 21 Sep 2021</time>
+      </div>
+      <p>I'd like to share a simple function I wrote for parameterized testig in <a href="https://deno.land/">Deno</a>.
+      </p>
+      <p>One of the things I like about Deno is that the developers are building in a lot of boilerplate tooling into
+        the runtime. This reduces a lot of the code that seems to come along by default with node projects. A mid-sized
+        node project can easily have a dozen or so primary dependencies supporting testing, and many more transitive
+        dependencies.</p>
+      <p>Deno, on the other hand, only has one function related to testing in the global api (<a
+          href="https://doc.deno.land/builtin/stable#Deno.test">Deno.test</a>, to register tests), and a <a
+          href="https://deno.land/std@0.107.0/testing">small handful of assertions</a> in the standard library. It's all
+        you <i>really</i> need, but sometimes the extras can be nice.</p>
+      <p>Like parameterized tests. If you haven't used a test library that supports them, parameterized tests are
+        basically just a syntatic sugar for running the same test case on different inputs. For example, <a
+          href="https://jestjs.io/blog/2018/05/29/jest-23-blazing-fast-delightful-testing#jest-each">Jest's .each</a>
+        function.</p>
+      <p>To achieve something similar in Deno, give this a try (I named it 'each' as well, for lack of a better name):
+      </p>
+      <div class="highlight">
+        <pre><code>function each&ltT&gt(params: Record&ltstring, T&gt, cb: (p: T) => void) {
+  Object.keys(params).map(title => {
+    Deno.test(title, () => { cb(params[title]) });
+  });
+}</code></pre>
+      </div>
+      <p>Calling it looks like this:</p>
+      <div class="highlight">
+        <pre><code>import { assertEquals } from "https://deno.land/std@0.107.0/testing/asserts.ts";
+each&lt[number[], number]&gt(
+  {
+    "1 + 2 + 3 == 6":     [[1, 2, 3], 6],
+    "-1 + -2 + -3 == -6": [[-1, -2, -3], -6],
+    "1 + 1 == 2":         [[1, 1], 2],
+    "10 + 9 + 8 + 7 == ": [[10, 9, 8, 7], 34],
+  },
+  ([vals, expected]) => {
+    const actual = vals.reduce((a,b) => a + b);
+    assertEquals(expected, actual);
+  }
+);</code></pre>
+      </div>
+      <p>Hopefully this can be helpful to someone, at least until more comprehensive testing features are added wto the
+        Deno runtime. You can read some of the ongoing discussion around a new test related api <a
+          href="https://github.com/denoland/deno/discussions/10771">here</a>.</p>
+    </article>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
