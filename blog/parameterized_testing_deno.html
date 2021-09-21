@@ -48,7 +48,7 @@
         basically just a syntactic sugar for running the same test case on different inputs. For example, <a
           href="https://jestjs.io/blog/2018/05/29/jest-23-blazing-fast-delightful-testing#jest-each">Jest's .each</a>
         function.</p>
-      <p>To achieve something similar in Deno, give this a try (I named it 'each' as well, for lack of a better name):
+      <p>To achieve something similar in Deno, give this a try (I called it 'each' as well, for lack of a better name):
       </p>
       <div class="highlight">
         <pre><code>function each&ltT&gt(params: Record&ltstring, T&gt, cb: (p: T) => void) {
@@ -73,7 +73,7 @@ each&lt[number[], number]&gt(
   }
 );</code></pre>
       </div>
-      <p>Hopefully this can be helpful to someone, at least until more comprehensive testing features are added wto the
+      <p>Hopefully this can be helpful to someone, at least until more comprehensive testing features are added to the
         Deno runtime. You can read some of the ongoing discussion around a new test related api <a
           href="https://github.com/denoland/deno/discussions/10771">here</a>.</p>
     </article>
