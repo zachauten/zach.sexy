@@ -48,7 +48,7 @@ blockquote {
   display: block;
 }
 
-.highlight {
+.sourceCode {
   background-color: #f0f0f0;
   overflow-x: scroll;
   margin-bottom: 15px;

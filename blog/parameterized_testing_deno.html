@@ -50,7 +50,7 @@
         function.</p>
       <p>To achieve something similar in Deno, give this a try (I called it 'each' as well, for lack of a better name):
       </p>
-      <div class="highlight">
+      <div class="sourceCode">
         <pre><code>function each&ltT&gt(params: Record&ltstring, T&gt, cb: (p: T) => void) {
   Object.keys(params).map(title => {
     Deno.test(title, () => { cb(params[title]) });
@@ -58,7 +58,7 @@
 }</code></pre>
       </div>
       <p>Calling it looks like this:</p>
-      <div class="highlight">
+      <div class="sourceCode">
         <pre><code>import { assertEquals } from "https://deno.land/std@0.107.0/testing/asserts.ts";
 each&lt[number[], number]&gt(
   {
