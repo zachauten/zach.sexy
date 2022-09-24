@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+      * {
+        font-size: medium;
+        font-family: monospace;
+      }
+      h2 {
+        display: flex;
+        justify-content: space-between;
+        font-weight: normal;
+      }
+      body {
+        width: 40%;
+      }
+      ul {
+        list-style-type: '- ';
+      }
+    </style>
+    <title>Zach's Resume</title>
+  </head>
+  <body>
+  <header>
+    <h1>Zach Auten</h1>
+    <a href="mailto: zachauten@gmail.com">zachauten@gmail.com</a>
+    <br>
+    <a href="https://github.com/zachauten">https://github.com/zachauten</a>
+  </header>
+  <section>
+    <h1>Education</h1>
+    <ul>
+      <li style="display:flex; justify-content:space-between;"><span>B.S. Computer Science, <a href="https://cs.appstate.edu">Appalachian State University</a></span><span>2016</span></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Experience</h1>
+    <h2>
+      <span>Senior Software Engineer - <a href="https://www.bandwidth.com">Bandwidth</a></span>
+      <span>March 2021 - Present</span>
+    </h2>
+    <ul>
+      <li>Work on the Integrations/Unified Communications team to create tools for onboarding and integrating new customers and products into Bandwidth's voice network.</li>
+      <li>Break down high level business initiatives into actionable tickets for the team.</li>
+      <li>Built "<a href="https://www.bandwidth.com/newsroom/bandwidth-launches-new-send-to-app-bringing-built-in-sms-messaging-to-microsoft-teams/">Send-To</a>", an extension to Microsoft Teams (typescript, nodejs) that allows users to send SMS messages without leaving the application.</li>
+      <li>Developed "Call Assure" (java, spring), a service that reroutes customer traffic in the event of network problems.</li>
+      <li>Integrated Bandwidth's voice services with Cisco's WebEx ecosystem.</li>
+    </ul>
+    <h2>
+      <span>Software Engineer - <a href="https://www.fidelitycharitable.org">Fidelity Charitable</a></span>
+      <span>March 2018 - March 2021</span>
+    </h2>
+    <ul>
+      <li>Wrote a part of the customer facing site that would let customers contribute assets from non-fidelity accounts (nodejs, angular). A part of this also involved writing a web-service (java, spring) to serve pdf's.</li>
+      <li>Wrote a web-service that allowed customers to automatically transfer certain assets from brokerage to charitable accounts. These transfers used to require manual intervention.</li>
+      <li>Updated parts of a legacy customer service application (struts, java) to run on a more modern web framework (angular 8 w/ ngrx). This also involved writing new micro-services.</li>
+      <li>Fixed a bug where some grants to charities were categorized incorrectly, and wrote a SQL script that amended existing records.</li>
+      <li>Wrote a python script to replace login credentials in hundreds of tests after the test database had been refreshed.</li>
+      <li>Wrote test automation, mostly for the browser (java, selenium, javascript, protractor). Also wrote tests for rest api’s.</li>
+      <li>Worked on "Innovation Day" hackathons. For one I implemented a tool that provided our front end with realistic data in test environments, and for another I worked with a designer to create a proof of concept for a front end component.</li>
+      <li>Was on the architecture group where I spent part of my time writing documentation and making proof of concepts for things that the architecture team wants to see used in the wider organization. For example I configured a code analysis tool (sonar) to work with nodejs jenkins pipelines.</li>
+    </ul>
+    <h2>
+      <span>Maintainer - <a href="https://www.github.com/homebrew">Homebrew</a></span>
+      <span>May 2019 - January 2021</span>
+    </h2>
+    <ul>
+      <li>Worked on the homebrew cli application (ruby). Fixed issues and reviewed pull requests.</li>
+      <li>Updated and reviewed updates to Homebrew’s core repository.</li>
+    </ul>
+    <h2>
+      <span>Automation Developer - <a href="https://trilliant.com/">Trilliant</a></span>
+      <span>June 2017 - March 2018</span>
+    </h2>
+    <ul>
+      <li>Wrote a framework to automate performance testing for latency of wireless WAN layer 2 networking devices with python and iperf.</li>
+      <li>Built a  screen reader using python to control devices under test over telnet.</li>
+      <li>Used vlans and virtual interfaces to programmatically arrange devices into arbitrary topologies.</li>
+    </ul>
+  </section>
+  </body>
+</html> 
