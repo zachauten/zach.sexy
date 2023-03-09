@@ -6,6 +6,7 @@
       * {
         font-size: medium;
         font-family: monospace;
+        box-sizing: border-box;
       }
       h2 {
         display: flex;
@@ -13,7 +14,8 @@
         font-weight: normal;
       }
       body {
-        width: 40%;
+        margin: 0 auto;
+        max-width: 728px;
       }
       ul {
         list-style-type: '- ';
@@ -41,33 +43,34 @@
       <span>March 2021 - Present</span>
     </h2>
     <ul>
-      <li>Work on the Integrations/Unified Communications team to create tools for onboarding and integrating new customers and products into Bandwidth's voice network.</li>
-      <li>Break down high level business initiatives into actionable tickets for the team.</li>
-      <li>Built "<a href="https://www.bandwidth.com/newsroom/bandwidth-launches-new-send-to-app-bringing-built-in-sms-messaging-to-microsoft-teams/">Send-To</a>", an extension to Microsoft Teams (typescript, nodejs) that allows users to send SMS messages without leaving the application.</li>
-      <li>Developed "<a href="https://www.bandwidth.com/products/call-assure/">Call Assure</a>" (java, spring), a service that reroutes customer traffic in the event of network problems.</li>
-      <li>Integrated Bandwidth's voice services with Cisco's WebEx ecosystem.</li>
-      <li>Instrumented observability (metrics, logs, traces) in java and node apps using Datadog and Prometheus.</li>
+      <li>I work on the Integrations team to create tools for onboarding new customers and products into Bandwidth's voice network. Many of these products are <a href="https://www.bandwidth.com/glossary/bring-your-own-carrier-byoc/">BYOC</a> programs, managed by a Spring(Java) service.</li>
+      <li><a href="https://www.bandwidth.com/newsroom/bandwidth-launches-new-send-to-app-bringing-built-in-sms-messaging-to-microsoft-teams/">Send-To</a>, an extension to Microsoft Teams written in Typescript that allows users to send SMS messages without leaving the application.</li>
+      <li><a href="https://www.bandwidth.com/products/call-assure/">Call Assure</a>, a service that reroutes customer traffic in the event of network problems. Call Assure brings in over $90k MMR.</li>
+      <li><a href="https://www.bandwidth.com/partners/webex-calling/">Cisco Cloud Connect</a>, a BYOC program for WebEx.</li>
+      <li><a href="https://www.bandwidth.com/en-gb/partners/microsoft-teams-operator-connect/">Micrsoft Operator Connect</a>, a BYOC program for Teams.</li>
+      <li>Containerized the team's projects with Docker to make them easier to deploy. Built CI pipelines in Github Actions to build the images.</li>
+      <li>Instrumented Java and Node apps for observability using Open Telemetry libraries, and Datadog.</li>
+      <li>Mentor junior developers through code review and pair programming.</li>
     </ul>
     <h2>
       <span>Software Engineer - <a href="https://www.fidelitycharitable.org">Fidelity Charitable</a></span>
       <span>March 2018 - March 2021</span>
     </h2>
     <ul>
-      <li>Wrote a part of the customer facing site that would let customers contribute assets from non-fidelity accounts (nodejs, angular). A part of this also involved writing a web-service (java, spring) to serve pdf's.</li>
-      <li>Wrote a web-service that allowed customers to automatically transfer certain assets from brokerage to charitable accounts. These transfers used to require manual intervention.</li>
-      <li>Updated parts of a legacy customer service application (struts, java) to run on a more modern web framework (angular 8 w/ ngrx). This also involved writing new micro-services.</li>
-      <li>Fixed a bug where some grants to charities were categorized incorrectly, and wrote a SQL script that amended existing records.</li>
+      <li>Wrote a part of the customer facing site that would let customers contribute assets from non-fidelity accounts (nodejs, angular).</li>
+      <li>Wrote a web service that allowed customers to automatically transfer certain assets from brokerage to charitable accounts.</li>
+      <li>Worked on an initiative to upgrade a customer service application from Java/Struts to Angular.</li>
       <li>Wrote a python script to replace login credentials in hundreds of tests after the test database had been refreshed.</li>
-      <li>Wrote test automation, mostly for the browser (java, selenium, javascript, protractor). Also wrote tests for rest api’s.</li>
+      <li>Wrote automated unit, browser, and api tests.</li>
       <li>Worked on "Innovation Day" hackathons. For one I implemented a tool that provided our front end with realistic data in test environments, and for another I worked with a designer to create a proof of concept for a front end component.</li>
-      <li>Was on the architecture group where I spent part of my time writing documentation and making proof of concepts for things that the architecture team wants to see used in the wider organization. For example I configured a code analysis tool (sonar) to work with nodejs jenkins pipelines.</li>
+      <li>Was on the architecture group where I wrote documentation and made proof of concepts for things that the architecture team wants to see used in the wider organization. For example I configured a code analysis tool to work with NodeJS Jenkins pipelines.</li>
     </ul>
     <h2>
       <span>Maintainer - <a href="https://www.github.com/homebrew">Homebrew</a></span>
       <span>May 2019 - January 2021</span>
     </h2>
     <ul>
-      <li>Worked on the homebrew cli application (ruby). Fixed issues and reviewed pull requests.</li>
+      <li>Worked on the homebrew cli application. Fixed issues and reviewed pull requests.</li>
       <li>Updated and reviewed updates to Homebrew’s core repository.</li>
     </ul>
     <h2>
@@ -78,6 +81,13 @@
       <li>Wrote a framework to automate performance testing for latency of wireless WAN layer 2 networking devices with python and iperf.</li>
       <li>Built a  screen reader using python to control devices under test over telnet.</li>
       <li>Used vlans and virtual interfaces to programmatically arrange devices into arbitrary topologies.</li>
+    </ul>
+    <h2>
+      <span>Firmware Test Engineer - <a href="https://www.honeywell.com">Honeywell</a></span>
+      <span>January 2017 - June 2017</span>
+    </h2>
+    <ul>
+      <li>Wrote python scripts to test smart utility meters.</li>
     </ul>
   </section>
   </body>
