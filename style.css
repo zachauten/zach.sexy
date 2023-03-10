@@ -9,6 +9,7 @@ body {
   line-height:1.5;
   margin:0 auto;
   max-width:728px;
+  -webkit-text-size-adjust: 100%;
 }
 
 main {
