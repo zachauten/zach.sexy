@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        font-size: medium;
+        font-family: monospace;
+        box-sizing: border-box;
+        -webkit-text-size-adjust: 100%;
+      }
+      h2 {
+        display: flex;
+        justify-content: space-between;
+        font-weight: normal;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 728px;
+      }
+      ul {
+        list-style-type: "- ";
+      }
+    </style>
+    <title>Zach's Resume</title>
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+      window.cronitor = window.cronitor || function () {
+        (window.cronitor.q = window.cronitor.q || []).push(arguments);
+      };
+      cronitor("config", {
+        clientKey: "9d66f6b97cb4f65407112fc31a855345",
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Zach Auten</h1>
+      <a href="mailto: zachauten@gmail.com">zachauten@gmail.com</a>
+      <br />
+      <a href="https://github.com/zachauten">https://github.com/zachauten</a>
+    </header>
+    <section>
+      <h1>Education</h1>
+      <ul>
+        <li style="display: flex; justify-content: space-between">
+          <span>B.S. Computer Science, <a href="https://cs.appstate.edu"
+            >Appalachian State University</a></span>
+          <span>2016</span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Experience</h1>
+      <h2>
+        <span>Senior Software Engineer - <a href="https://www.bandwidth.com"
+          >Bandwidth</a></span>
+        <span>March 2021 - Present</span>
+      </h2>
+      <ul>
+        <li>
+          I'm leading a team that's building services that allow customers to
+          manage voice features like caller id, call fowarding, and others.
+        </li>
+        <li>
+          Work with technical and nontechnical stakeholders to define
+          requirements, design solutions, and plan the roadmap for my team.
+        </li>
+        <li>
+          Most of my work is on Java backends deployed on AWS. We use MariaDB. I
+          occassionaly work with React on the frontend.
+        </li>
+        <li>
+          Introduced my team and other teams to Open Telemetry, and implemented
+          it in several projects.
+        </li>
+        <li>
+          Containerized the team's projects with Docker to make them easier to
+          deploy. Built CI pipelines in Github Actions to build, test, and
+          deploy applications to test and production environments.
+        </li>
+        <li>
+          Mentor junior developers through code review and pair programming.
+        </li>
+        <li>
+          Worked on the Integrations team to create tools for onboarding new
+          customers and products into Bandwidth's voice network. Many of these
+          products are <a
+            href="https://www.bandwidth.com/glossary/bring-your-own-carrier-byoc/"
+          >BYOC</a> programs.
+          <ul style="list-style: inside">
+            <li>
+              <a
+                href="https://www.bandwidth.com/newsroom/bandwidth-launches-new-send-to-app-bringing-built-in-sms-messaging-to-microsoft-teams/"
+              >Send-To</a>, an extension to Microsoft Teams written in
+              Typescript that allows users to send SMS messages without leaving
+              the application.
+            </li>
+            <li>
+              <a href="https://www.bandwidth.com/products/call-assure/"
+              >Call Assure</a>, a service that reroutes customer traffic in the
+              event of network problems. Call Assure brings in over $90k MRR.
+            </li>
+            <li>
+              <a href="https://www.bandwidth.com/partners/webex-calling/"
+              >Cisco Cloud Connect</a>, a BYOC program for WebEx.
+            </li>
+            <li>
+              <a
+                href="https://www.bandwidth.com/en-gb/partners/microsoft-teams-operator-connect/"
+              >Micrsoft Operator Connect</a>, a BYOC program for Teams.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>
+        <span>Software Engineer - <a href="https://www.fidelitycharitable.org"
+          >Fidelity Charitable</a></span>
+        <span>March 2018 - March 2021</span>
+      </h2>
+      <ul>
+        <li>
+          Wrote a part of the customer facing site that would let customers
+          contribute assets from non-fidelity accounts (nodejs, angular).
+        </li>
+        <li>
+          Wrote a web service that allowed customers to automatically transfer
+          certain assets from brokerage to charitable accounts.
+        </li>
+        <li>
+          Worked on an initiative to upgrade a customer service application from
+          Java/Struts to Angular.
+        </li>
+        <li>
+          Wrote a python script to replace login credentials in hundreds of
+          tests after the test database had been refreshed.
+        </li>
+        <li>Wrote automated unit, browser, and api tests.</li>
+        <li>
+          Worked on "Innovation Day" hackathons. For one I implemented a tool
+          that provided our front end with realistic data in test environments,
+          and for another I worked with a designer to create a proof of concept
+          for a front end component.
+        </li>
+        <li>
+          Was on the architecture group where I wrote documentation and made
+          proof of concepts for things that the architecture team wants to see
+          used in the wider organization. For example I configured a code
+          analysis tool to work with NodeJS Jenkins pipelines.
+        </li>
+      </ul>
+      <h2>
+        <span>Maintainer - <a href="https://www.github.com/homebrew"
+          >Homebrew</a></span>
+        <span>May 2019 - January 2021</span>
+      </h2>
+      <ul>
+        <li>
+          Worked on the homebrew cli application. Fixed issues and reviewed pull
+          requests.
+        </li>
+        <li>Updated and reviewed updates to Homebrew’s core repository.</li>
+      </ul>
+      <h2>
+        <span>Automation Developer - <a href="https://trilliant.com/"
+          >Trilliant</a></span>
+        <span>June 2017 - March 2018</span>
+      </h2>
+      <ul>
+        <li>
+          Wrote a framework to automate performance testing for latency of
+          wireless WAN layer 2 networking devices with python and iperf.
+        </li>
+        <li>
+          Built a screen reader using python to control devices under test over
+          telnet.
+        </li>
+        <li>
+          Used vlans and virtual interfaces to programmatically arrange devices
+          into arbitrary topologies.
+        </li>
+      </ul>
+      <h2>
+        <span>Firmware Test Engineer - <a href="https://www.honeywell.com"
+          >Honeywell</a></span>
+        <span>January 2017 - June 2017</span>
+      </h2>
+      <ul>
+        <li>Wrote python scripts to test smart utility meters.</li>
+      </ul>
+    </section>
+  </body>
+</html>
