@@ -4,7 +4,7 @@ export default function Home() {
       <article>
         <div class="title">
           <h1>
-            <a href="/blog/parameterized_testing_deno.html">
+            <a href="/blog/parameterized_testing_deno">
               Parameterized testing in Deno
             </a>
           </h1>

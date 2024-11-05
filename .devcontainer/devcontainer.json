@@ -9,7 +9,9 @@
         "denoland.vscode-deno",
         "sastan.twind-intellisense",
         "VisualStudioExptTeam.vscodeintellicode",
-        "PKief.material-icon-theme"
+        "PKief.material-icon-theme",
+        "hashicorp.hcl",
+        "ms-azuretools.vscode-docker"
       ]
     }
   },
