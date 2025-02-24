@@ -6,7 +6,7 @@ import { Head } from "$fresh/runtime.ts";
 
 export default function App({ Component }: PageProps) {
   return (
-    <html lang={"en"}>
+    <html lang="en">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@ export default function App({ Component }: PageProps) {
         />
         <meta property="og:type" content="website" key="og:type" />
         <meta
-          name="description" 
+          name="description"
           content="Homepage of Zach's blog."
         />
         <title>Zach's site! 👋</title>
@@ -26,7 +26,7 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href={asset("/style.css")} media="screen" />
         <link
           rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙃</text></svg>"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>"
         />
       </Head>
       <Analytics>

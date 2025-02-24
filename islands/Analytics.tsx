@@ -8,7 +8,7 @@ interface Props {
 
 export default function Analytics({ children }: Props) {
   if (!IS_BROWSER) {
-    return <></>;
+    return;
   }
   Cronitor.load("9d66f6b97cb4f65407112fc31a855345", {
     debug: false, // <-- You can enable this to see logs in the console

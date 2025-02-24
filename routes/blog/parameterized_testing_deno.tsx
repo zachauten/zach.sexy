@@ -1,5 +1,4 @@
 import { PageProps } from "$fresh/server.ts";
-import { Head } from "$fresh/runtime.ts";
 
 const snippet1 = `
 function each<T>(params: Record<string, T>, cb: (p: T) => void) {
@@ -25,7 +24,11 @@ each<[number[], number]>(
 );
 `;
 
-const title = "Parameterized testing in Deno";
+export const title = "Parameterized testing in Deno";
+export const intro = <p>
+I'd like to share a simple function I wrote for parameterized testing
+in <a href="https://deno.land/">Deno</a>.
+</p>;
 
 export default function parameterized_testing_deno(_props: PageProps) {
   return (
@@ -35,15 +38,15 @@ export default function parameterized_testing_deno(_props: PageProps) {
           rel="canonical"
           href="https://zach.sexy/blog/parameterized_testing_deno"
         />
-        <meta property="og:type" content="website" key="og:type"/>
+        <meta property="og:type" content="website" key="og:type" />
         <meta
           property="og:title"
           content={title}
           key="og:title"
         />
         <meta
-          name="description" 
-          content="A couple code snippets used toadd parameterized testing to Deno's unit tests."
+          name="description"
+          content="A couple code snippets used to add parameterized testing to Deno's unit tests."
         />
         <title>{title}</title>
       </head>
@@ -52,10 +55,7 @@ export default function parameterized_testing_deno(_props: PageProps) {
           <h1>{title}</h1>
           <time datetime="2021-09-21">Published 21 Sep 2021</time>
         </div>
-        <p>
-          I'd like to share a simple function I wrote for parameterized testing
-          in <a href="https://deno.land/">Deno</a>.
-        </p>
+        {intro}
         <p>
           One of the things I like about Deno is that the developers are
           building in a lot of boilerplate tooling into the runtime. This
