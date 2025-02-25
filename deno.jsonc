@@ -13,6 +13,7 @@
   "exclude": ["**/_fresh/*"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "@giscus/react": "npm:@giscus/react@^3.1.0",
     "@preact/signals": "npm:@preact/signals@^2.0.1",
     "@preact/signals-core": "npm:@preact/signals-core@^1.8.0",
     "@std/dotenv": "jsr:@std/dotenv@^0.225.3",

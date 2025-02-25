@@ -1,4 +1,5 @@
 import { PageProps } from "$fresh/server.ts";
+import Comments from "../../islands/Comments.tsx"
 
 export const title = "Deno + Open Telemetry";
 export const intro = (
@@ -82,6 +83,7 @@ Video Demo of running a Deno/Fresh application on Fly.io and sending telemetry t
  */
         }
       </article>
+      <Comments />
     </>
   );
 }

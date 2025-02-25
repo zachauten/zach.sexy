@@ -1,4 +1,5 @@
 import { PageProps } from "$fresh/server.ts";
+import Comments from "../../islands/Comments.tsx";
 
 const snippet1 = `
 function each<T>(params: Record<string, T>, cb: (p: T) => void) {
@@ -108,6 +109,7 @@ export default function parameterized_testing_deno(_props: PageProps) {
           <a href="https://github.com/denoland/deno/discussions/10771">here</a>.
         </p>
       </article>
+      <Comments />
     </>
   );
 }

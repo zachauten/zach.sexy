@@ -10,6 +10,7 @@ import * as $blog_parameterized_testing_deno from "./routes/blog/parameterized_t
 import * as $blogroll from "./routes/blogroll.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Analytics from "./islands/Analytics.tsx";
+import * as $Comments from "./islands/Comments.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -25,6 +26,7 @@ const manifest = {
   },
   islands: {
     "./islands/Analytics.tsx": $Analytics,
+    "./islands/Comments.tsx": $Comments,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
