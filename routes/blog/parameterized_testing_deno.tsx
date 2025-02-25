@@ -25,10 +25,13 @@ each<[number[], number]>(
 `;
 
 export const title = "Parameterized testing in Deno";
-export const intro = <p>
-I'd like to share a simple function I wrote for parameterized testing
-in <a href="https://deno.land/">Deno</a>.
-</p>;
+export const intro = (
+  <p>
+    I'd like to share a simple function I wrote for parameterized testing in
+    {" "}
+    <a href="https://deno.land/">Deno</a>.
+  </p>
+);
 
 export default function parameterized_testing_deno(_props: PageProps) {
   return (

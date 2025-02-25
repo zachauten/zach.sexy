@@ -32,5 +32,3 @@ jobs:
           project: "zach-sexy"
           entrypoint: "main.ts"
           root: "."
-          
-          
