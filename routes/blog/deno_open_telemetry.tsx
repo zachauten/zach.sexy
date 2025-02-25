@@ -24,7 +24,7 @@ export default function deno_open_telemetry(_props: PageProps) {
         />
         <meta
           name="description"
-          content="This was the last thing stopping me from using Deno in production"
+          content="An article about the recent support for Open Telemetry in Deno"
         />
         <title>{title}</title>
       </head>
