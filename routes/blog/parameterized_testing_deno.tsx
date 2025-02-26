@@ -1,16 +1,17 @@
 import { PageProps } from "$fresh/server.ts";
+import Code from "../../components/Code.tsx";
 import Comments from "../../islands/Comments.tsx";
 
-const snippet1 = `
-function each<T>(params: Record<string, T>, cb: (p: T) => void) {
+const snippet1 =
+  `function each<T>(params: Record<string, T>, cb: (p: T) => void) {
   Object.keys(params).map(title => {
     Deno.test(title, () => { cb(params[title]) });
   });
 }
 `;
 
-const snippet2 = `
-import { assertEquals } from "https://deno.land/std@0.107.0/testing/asserts.ts";
+const snippet2 =
+  `import { assertEquals } from "https://deno.land/std@0.107.0/testing/asserts.ts";
 each<[number[], number]>(
   {
     "1 + 2 + 3 == 6":     [[1, 2, 3], 6],
@@ -93,15 +94,9 @@ export default function parameterized_testing_deno(_props: PageProps) {
           To achieve something similar in Deno, give this a try (I called it
           'each' as well, for lack of a better name):
         </p>
-        <div class="sourceCode">
-          <pre>
-<code>{snippet1}</code></pre>
-        </div>
+        <Code>{snippet1}</Code>
         <p>Calling it looks like this:</p>
-        <div class="sourceCode">
-          <pre>
-<code>{snippet2}</code></pre>
-        </div>
+        <Code>{snippet2}</Code>
         <p>
           Hopefully this can be helpful to someone, at least until more
           comprehensive testing features are added to the Deno runtime. You can
