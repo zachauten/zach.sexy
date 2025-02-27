@@ -1,14 +1,16 @@
-import { JSX } from "preact";
+interface Props {
+  title: string;
+}
 
-export default function Title(props: JSX.HTMLAttributes<HTMLTitleElement>) {
+export default function Title(props: Props) {
   return (
     <>
       <meta
         property="og:title"
-        content={props.children as string}
+        content={props.title as string}
         key="og:title"
       />
-      <title>{props.children}</title>
+      <title>{props.title}</title>
     </>
   );
 }

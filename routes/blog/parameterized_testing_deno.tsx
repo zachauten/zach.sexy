@@ -29,13 +29,15 @@ each<[number[], number]>(
 );
 `;
 
-export const title = (
+const title = "Parameterized testing in Deno";
+export const articleTitle = (
   <ArticleTitle
     href="/blog/parameterized_testing_deno"
     date={new Date("2021-09-21")}
-    title="Parameterized testing in Deno"
+    title={title}
   />
 );
+
 export const intro = (
   <p>
     I'd like to share a simple function I wrote for parameterized testing in
@@ -53,11 +55,11 @@ export default function parameterized_testing_deno(_props: PageProps) {
           href="https://zach.sexy/blog/parameterized_testing_deno"
         />
         <meta property="og:type" content="article" key="og:type" />
-        <Title>{title}</Title>
+        <Title title={title} />
         <Description content="A couple code snippets used to add parameterized testing to Deno's unit tests." />
       </head>
       <article>
-        {title}
+        {articleTitle}
         {intro}
         <p>
           One of the things I like about Deno is that the developers are

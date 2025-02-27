@@ -13,15 +13,15 @@ export default function Home() {
           name="description"
           content="Homepage of Zach's blog."
         />
-        <Title>{title}</Title>
+        <Title title={title} />
         <Description content="Homepage of Zach's blog" />
       </head>
       <article>
-        {denoOtel.title}
+        {denoOtel.articleTitle}
         {denoOtel.intro}
       </article>
       <article>
-        {parameterizedTesting.title}
+        {parameterizedTesting.articleTitle}
         {parameterizedTesting.intro}
       </article>
     </>

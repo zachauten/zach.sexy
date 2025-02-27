@@ -6,11 +6,12 @@ import Title from "../../components/Title.tsx";
 import ArticleTitle from "../../components/ArticleTitle.tsx";
 import Description from "../../components/Description.tsx";
 
-export const title = (
+const title = "Deno + Open Telemetry";
+export const articleTitle = (
   <ArticleTitle
     href="/blog/deno_open_telemetry"
     date={new Date("2024-02-24")}
-    title="Deno + Open Telemetry"
+    title={title}
   />
 );
 export const intro = (
@@ -111,11 +112,11 @@ export default function deno_open_telemetry(_props: PageProps) {
           href="https://zach.sexy/blog/deno_open_telemetry"
         />
         <meta property="og:type" content="article" key="og:type" />
-        <Title>{title}</Title>
+        <Title title={title} />
         <Description content="An article about the recent support for Open Telemetry in Deno" />
       </head>
       <article>
-        {title}
+        {articleTitle}
         {intro}
         <p>
           Deno's an incredible platform, but the lack of observability support
