@@ -32,3 +32,6 @@ jobs:
           project: "zach-sexy"
           entrypoint: "main.ts"
           root: "."
+
+      - name: Push sitemap to IndexNow
+        run: deno run -A utils/indexnow.ts
