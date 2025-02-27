@@ -3,7 +3,7 @@ import * as denoOtel from "./blog/deno_open_telemetry.tsx";
 import Title from "../components/Title.tsx";
 import Description from "../components/Description.tsx";
 
-const title = "Zach's site! 👋";
+const title = "Zach Auten";
 
 export default function Home() {
   return (
