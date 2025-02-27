@@ -1,6 +1,9 @@
 import { PageProps } from "$fresh/server.ts";
 import Code from "../../components/Code.tsx";
 import Comments from "../../islands/Comments.tsx";
+import Title from "../../components/Title.tsx";
+import ArticleTitle from "../../components/ArticleTitle.tsx";
+import Description from "../../components/Description.tsx";
 
 const snippet1 =
   `function each<T>(params: Record<string, T>, cb: (p: T) => void) {
@@ -26,7 +29,13 @@ each<[number[], number]>(
 );
 `;
 
-export const title = "Parameterized testing in Deno";
+export const title = (
+  <ArticleTitle
+    href="/blog/parameterized_testing_deno"
+    date={new Date("2021-09-21")}
+    title="Parameterized testing in Deno"
+  />
+);
 export const intro = (
   <p>
     I'd like to share a simple function I wrote for parameterized testing in
@@ -43,23 +52,12 @@ export default function parameterized_testing_deno(_props: PageProps) {
           rel="canonical"
           href="https://zach.sexy/blog/parameterized_testing_deno"
         />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta
-          property="og:title"
-          content={title}
-          key="og:title"
-        />
-        <meta
-          name="description"
-          content="A couple code snippets used to add parameterized testing to Deno's unit tests."
-        />
-        <title>{title}</title>
+        <meta property="og:type" content="article" key="og:type" />
+        <Title>{title}</Title>
+        <Description content="A couple code snippets used to add parameterized testing to Deno's unit tests." />
       </head>
       <article>
-        <div class="title">
-          <h1>{title}</h1>
-          <time datetime="2021-09-21">Published 21 Sep 2021</time>
-        </div>
+        {title}
         {intro}
         <p>
           One of the things I like about Deno is that the developers are

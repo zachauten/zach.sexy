@@ -1,30 +1,28 @@
 import * as parameterizedTesting from "./blog/parameterized_testing_deno.tsx";
 import * as denoOtel from "./blog/deno_open_telemetry.tsx";
+import Title from "../components/Title.tsx";
+import Description from "../components/Description.tsx";
+
+const title = "Zach's site! 👋";
 
 export default function Home() {
   return (
     <>
+      <head>
+        <meta
+          name="description"
+          content="Homepage of Zach's blog."
+        />
+        <Title>{title}</Title>
+        <Description content="Homepage of Zach's blog" />
+      </head>
       <article>
-        <div class="title">
-          <h1>
-            <a href="/blog/deno_open_telemetry">
-              {denoOtel.title}
-            </a>
-          </h1>
-          {denoOtel.intro}
-          <time datetime="2024-02-24">24 Feb 2024</time>
-        </div>
+        {denoOtel.title}
+        {denoOtel.intro}
       </article>
       <article>
-        <div class="title">
-          <h1>
-            <a href="/blog/parameterized_testing_deno">
-              {parameterizedTesting.title}
-            </a>
-          </h1>
-          {parameterizedTesting.intro}
-          <time datetime="2021-09-21">21 Sep 2021</time>
-        </div>
+        {parameterizedTesting.title}
+        {parameterizedTesting.intro}
       </article>
     </>
   );

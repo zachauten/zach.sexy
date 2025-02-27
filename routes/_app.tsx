@@ -10,19 +10,8 @@ export default function App({ Component }: PageProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <meta
-          property="og:title"
-          content="Zach's site!"
-          key="og:title"
-        />
         <meta property="og:type" content="website" key="og:type" />
-        <meta
-          name="description"
-          content="Homepage of Zach's blog."
-        />
-        <title>Zach's site! 👋</title>
-
+        <meta property="og:site_name" content="zach.sexy" />
         <link rel="stylesheet" href={asset("/style.css")} media="screen" />
         <link
           rel="icon"

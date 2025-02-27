@@ -21,6 +21,7 @@ header {
 }
 
 nav {
+  font-family: Helvetica, sans-serif;
   display: inline-flex;
   flex-flow: row wrap;
 }
@@ -35,7 +36,12 @@ article {
 }
 
 p {
+  font-family: Helvetica, sans-serif;
   padding-bottom: 15px;
+}
+
+time {
+  font-family: Helvetica, sans-serif;
 }
 
 blockquote {
@@ -52,8 +58,8 @@ img {
   object-fit: contain;
 }
 
-.tags {
-  display: block;
+.title {
+  margin-bottom: 0.5rem;
 }
 
 .sourceCode {
