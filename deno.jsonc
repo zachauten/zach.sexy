@@ -22,7 +22,8 @@
     "@std/path": "jsr:@std/path@^1.0.8",
     "marked-smartypants": "npm:marked-smartypants@^1.1.9",
     "preact": "npm:preact@^10.26.2",
-    "prismjs": "npm:prismjs@1.29.0"
+    "prismjs": "npm:prismjs@1.29.0",
+    "rss": "npm:rss@^1.2.2"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" }
 }
