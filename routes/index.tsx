@@ -11,7 +11,7 @@ export default async function Home() {
         <meta property="og:type" content="website" key="og:type" />
         <meta
           property="og:image"
-          content="https://zach.sexy/android-chrome-512x512.png"
+          content="https://zach.sexy/img/opengraph.png"
         />
         <Title title="Zach Auten" />
         <Description content="Homepage of Zach's blog" />
