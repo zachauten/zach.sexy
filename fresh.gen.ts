@@ -4,9 +4,8 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_title_html from "./routes/blog/[title].html.tsx";
-import * as $blog_deno_open_telemetry from "./routes/blog/deno_open_telemetry.tsx";
-import * as $blog_parameterized_testing_deno from "./routes/blog/parameterized_testing_deno.tsx";
 import * as $blogroll from "./routes/blogroll.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Analytics from "./islands/Analytics.tsx";
@@ -17,10 +16,8 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/blog/[title].html.tsx": $blog_title_html,
-    "./routes/blog/deno_open_telemetry.tsx": $blog_deno_open_telemetry,
-    "./routes/blog/parameterized_testing_deno.tsx":
-      $blog_parameterized_testing_deno,
     "./routes/blogroll.tsx": $blogroll,
     "./routes/index.tsx": $index,
   },

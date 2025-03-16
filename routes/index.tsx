@@ -1,11 +1,12 @@
-import * as parameterizedTesting from "./blog/parameterized_testing_deno.tsx";
-import * as denoOtel from "./blog/deno_open_telemetry.tsx";
 import Title from "../components/Title.tsx";
 import Description from "../components/Description.tsx";
+import { getPosts } from "../utils/posts.ts";
+import ArticleTitle from "../components/ArticleTitle.tsx";
 
 const title = "Zach Auten";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts();
   return (
     <>
       <head>
@@ -13,17 +14,22 @@ export default function Home() {
           name="description"
           content="Homepage of Zach's blog."
         />
+        <meta property="og:type" content="website" key="og:type" />
         <Title title={title} />
         <Description content="Homepage of Zach's blog" />
       </head>
-      <article>
-        {denoOtel.articleTitle}
-        {denoOtel.intro}
-      </article>
-      <article>
-        {parameterizedTesting.articleTitle}
-        {parameterizedTesting.intro}
-      </article>
+      {posts.map((post) => {
+        return (
+          <article>
+            <ArticleTitle
+              href={"blog/" + post.slug}
+              date={post.published}
+              title={post.title}
+            />
+            <p>{post.snippet}</p>
+          </article>
+        );
+      })}
     </>
   );
 }
