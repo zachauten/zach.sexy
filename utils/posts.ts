@@ -12,6 +12,7 @@ export interface FrontMatter {
   title: string;
   published: Date;
   snippet: string;
+  image: string;
 }
 
 export async function getPosts(): Promise<Post[]> {
@@ -35,5 +36,6 @@ export async function getPost(slug: string): Promise<Post | null> {
     published: new Date(attrs.published),
     content: body,
     snippet: attrs.snippet,
+    image: attrs.image,
   };
 }

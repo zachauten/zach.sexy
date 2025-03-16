@@ -2,7 +2,10 @@
 title: Deno + OpenTelemetry
 published: 2024-02-24
 snippet: "The most recent release of Deno last week included a feature that I think is very exciting: it built support for Open Telemetry directly into the runtime."
+image: https://zach.sexy/img/deno-otel-logo.svg
 ---
+
+![combined deno and open telemetry logos](/img/deno-otel-logo.svg)
 
 The most [recent release of Deno](https://deno.com/blog/v2.2) last week included
 a feature that I think is very exciting: it built support for Open Telemetry
