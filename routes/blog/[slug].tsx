@@ -32,7 +32,7 @@ export default function PostPage(props: PageProps<Post>) {
         {post.image ? <meta property="og:image" content={post.image} /> : null}
         <Canonical url={"https://zach.sexy/blog/" + post.slug} />
         <Title title={post.title} />
-        <Description content="An article about the recent support for Open Telemetry in Deno" />
+        <Description content={post.snippet} />
       </head>
       <ArticleTitle
         href={post.slug}
