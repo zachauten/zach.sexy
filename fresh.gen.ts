@@ -7,7 +7,6 @@ import * as $_app from "./routes/_app.tsx";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_title_html from "./routes/blog/[title].html.tsx";
 import * as $blogroll from "./routes/blogroll.tsx";
-import * as $feed_atom_xml from "./routes/feed/atom.xml.tsx";
 import * as $feed_rss_xml from "./routes/feed/rss.xml.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Analytics from "./islands/Analytics.tsx";
@@ -21,7 +20,6 @@ const manifest = {
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/blog/[title].html.tsx": $blog_title_html,
     "./routes/blogroll.tsx": $blogroll,
-    "./routes/feed/atom.xml.tsx": $feed_atom_xml,
     "./routes/feed/rss.xml.tsx": $feed_rss_xml,
     "./routes/index.tsx": $index,
   },
