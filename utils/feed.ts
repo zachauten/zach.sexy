@@ -1,4 +1,4 @@
-import { Feed } from "npm:feed";
+import { Feed } from "feed";
 import { getPosts } from "./posts.ts";
 
 const posts = await getPosts();

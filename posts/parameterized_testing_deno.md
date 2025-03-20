@@ -2,7 +2,10 @@
 title: Parameterized testing in Deno
 published: 2021-9-21
 snippet: "I'd like to share a simple function I wrote for parameterized testing in Deno."
+image: https://zach.sexy/img/denosaur-labcoat.webp
 ---
+
+![a friendly brontosaurus wearing a labcoat and  holding a beaker](/img/parameterized_testing_deno/denosaur-labcoat.webp)
 
 I'd like to share a simple function I wrote for parameterized testing in
 [Deno](https://deno.land/).
