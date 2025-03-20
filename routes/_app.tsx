@@ -3,6 +3,7 @@ import { asset } from "$fresh/src/runtime/utils.ts";
 import Header from "../components/Header.tsx";
 import Analytics from "../islands/Analytics.tsx";
 import { Head } from "$fresh/runtime.ts";
+import ClarityProvider from "../islands/ClarityProvider.tsx";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -32,12 +33,14 @@ export default function App({ Component }: PageProps) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Analytics>
-        <body>
-          <Header />
-          <main>
-            <Component />
-          </main>
-        </body>
+        <ClarityProvider>
+          <body>
+            <Header />
+            <main>
+              <Component />
+            </main>
+          </body>
+        </ClarityProvider>
       </Analytics>
     </html>
   );

@@ -1,4 +1,4 @@
-import * as Cronitor from "https://esm.sh/@cronitorio/cronitor-rum@0.4.1";
+import * as Cronitor from "@cronitorio/cronitor-rum";
 import { ComponentChildren } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
