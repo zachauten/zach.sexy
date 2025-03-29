@@ -28,14 +28,19 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 export async function getPost(slug: string): Promise<Post | null> {
-  const text = await Deno.readTextFile(join(POST_DIR, `${slug}.md`));
-  const { attrs, body } = extract<FrontMatter>(text);
-  return {
-    slug,
-    title: attrs.title,
-    published: new Date(attrs.published),
-    content: body,
-    snippet: attrs.snippet,
-    image: attrs.image,
-  };
+  try {
+    const text = await Deno.readTextFile(join(POST_DIR, `${slug}.md`));
+    const { attrs, body } = extract<FrontMatter>(text);
+    return {
+      slug,
+      title: attrs.title,
+      published: new Date(attrs.published),
+      content: body,
+      snippet: attrs.snippet,
+      image: attrs.image,
+    };
+  } catch (error) {
+    console.warn(error);
+    return null;
+  }
 }

@@ -1,4 +1,4 @@
-const urls = [
+const _urls = [
   "https://marvinh.dev/",
   "https://jeremymorrell.dev/blog/",
   "https://steveklabnik.com/writing",
