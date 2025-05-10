@@ -11,7 +11,6 @@ import * as $feed_atom_xml from "./routes/feed/atom.xml.tsx";
 import * as $feed_rss_xml from "./routes/feed/rss.xml.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Analytics from "./islands/Analytics.tsx";
-import * as $ClarityProvider from "./islands/ClarityProvider.tsx";
 import * as $Comments from "./islands/Comments.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -28,7 +27,6 @@ const manifest = {
   },
   islands: {
     "./islands/Analytics.tsx": $Analytics,
-    "./islands/ClarityProvider.tsx": $ClarityProvider,
     "./islands/Comments.tsx": $Comments,
   },
   baseUrl: import.meta.url,
