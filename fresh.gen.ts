@@ -10,6 +10,7 @@ import * as $blogroll from "./routes/blogroll.tsx";
 import * as $feed_atom_xml from "./routes/feed/atom.xml.tsx";
 import * as $feed_rss_xml from "./routes/feed/rss.xml.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $presentations from "./routes/presentations.tsx";
 import * as $Analytics from "./islands/Analytics.tsx";
 import * as $Comments from "./islands/Comments.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -24,6 +25,7 @@ const manifest = {
     "./routes/feed/atom.xml.tsx": $feed_atom_xml,
     "./routes/feed/rss.xml.tsx": $feed_rss_xml,
     "./routes/index.tsx": $index,
+    "./routes/presentations.tsx": $presentations,
   },
   islands: {
     "./islands/Analytics.tsx": $Analytics,
