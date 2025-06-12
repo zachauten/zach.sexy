@@ -1,0 +1,21 @@
+name: Print resume.html to PDF
+on:
+  push:
+    branches: main
+
+jobs:
+  print:
+    name: Print resume
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: html to pdf
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./static/resume.html
+          outputFile: ./resume.pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zach_auten_resume.pdf
+          path: ./resume.pdf
