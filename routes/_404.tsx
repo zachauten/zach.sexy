@@ -1,12 +1,11 @@
-import { Head } from "$fresh/runtime.ts";
-import { PageProps } from "$fresh/server.ts";
+import { PageProps } from "fresh";
 
 export default function Error404({ url }: PageProps) {
   return (
     <>
-      <Head>
+      <head>
         <title>404 - Page not found</title>
-      </Head>
+      </head>
       <p>404 not found: {url.pathname}</p>
     </>
   );

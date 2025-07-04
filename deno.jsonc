@@ -1,30 +1,43 @@
 {
-  "lock": false,
   "tasks": {
-    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
-    "manifest": "deno task cli manifest $(pwd)",
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "check": "deno fmt --check . && deno lint . && deno check **/*.ts && deno check **/*.tsx",
+    "dev": "deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts",
-    "update": "deno run -A -r https://fresh.deno.dev/update ."
+    "start": "deno run -A main.ts",
+    "update": "deno run -A -r jsr:@fresh/update ."
   },
   "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "exclude": ["**/_fresh/*"],
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@giscus/react": "npm:@giscus/react@^3.1.0",
-    "@preact/signals": "npm:@preact/signals@^2.0.1",
-    "@preact/signals-core": "npm:@preact/signals-core@^1.8.0",
+    "@preact/signals": "npm:@preact/signals@^2.0.4",
     "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
     "@std/front-matter": "jsr:@std/front-matter@^1.0.8",
     "@std/path": "jsr:@std/path@^1.0.8",
     "feed": "npm:feed@^4.2.2",
     "marked-smartypants": "npm:marked-smartypants@^1.1.9",
-    "preact": "npm:preact@^10.26.2",
+    "preact": "npm:preact@^10.26.6",
     "prismjs": "npm:prismjs@1.29.0",
-    "rss": "npm:rss@^1.2.2"
+    "rss": "npm:rss@^1.2.2",
+    "fresh": "jsr:@fresh/core@^2.0.0-alpha.34"
   },
-  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" }
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.asynciterable",
+      "dom.iterable",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": [
+      "a",
+      "img",
+      "source",
+      "body",
+      "html",
+      "head"
+    ]
+  }
 }

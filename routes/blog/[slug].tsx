@@ -1,5 +1,4 @@
-import { Handlers } from "$fresh/server.ts";
-import { PageProps } from "$fresh/server.ts";
+import { FreshContext } from "fresh";
 import { CSS } from "@deno/gfm";
 import "npm:prismjs@1.29.0/components/prism-typescript.js";
 import "npm:prismjs@1.29.0/components/prism-bash.js";
@@ -8,19 +7,13 @@ import { Markdown } from "../../components/Markdown.tsx";
 import Comments from "../../islands/Comments.tsx";
 import Title from "../../components/Title.tsx";
 import Description from "../../components/Description.tsx";
-import { getPost, Post } from "../../utils/posts.ts";
+import { getPost } from "../../utils/posts.ts";
 import Canonical from "../../components/Canonical.tsx";
+import { Post } from "../../utils/posts.ts";
 
-export const handler: Handlers<Post> = {
-  async GET(_req, ctx) {
-    const post = await getPost(ctx.params.slug);
-    if (post === null) return ctx.renderNotFound();
-    return ctx.render(post);
-  },
-};
-
-export default function PostPage(props: PageProps<Post>) {
-  const post = props.data;
+export default async function PostPage(ctx: FreshContext<Post>) {
+  const post = await getPost(ctx.params.slug);
+  if (post === null) throw new Deno.errors.NotFound();
   return (
     <>
       <head>

@@ -1,8 +1,8 @@
-import { Handlers } from "$fresh/server.ts";
 import feed from "../../utils/feed.ts";
+import { Handlers } from "fresh/compat";
 
 export const handler: Handlers = {
-  GET(_req) {
+  GET() {
     return new Response(feed.rss2());
   },
 };

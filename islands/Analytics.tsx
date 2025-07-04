@@ -1,6 +1,6 @@
 import * as Cronitor from "https://esm.sh/@cronitorio/cronitor-rum@0.4.1";
 import { ComponentChildren } from "preact";
-import { IS_BROWSER } from "$fresh/runtime.ts";
+import { IS_BROWSER } from "fresh/runtime";
 
 interface Props {
   children: ComponentChildren;
