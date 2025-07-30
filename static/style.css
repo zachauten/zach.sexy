@@ -9,6 +9,10 @@ html {
 }
 
 body {
+  /* diplay, flex-flow, and min-height facilitate the footer sticking to the bottom of the viewport. */
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
@@ -18,10 +22,24 @@ body {
 
 main {
   padding: 1em;
+  flex-grow: 1; /* Lets the main element grow to force the footer to the bottom. */
 }
 
 header {
   padding: 1em 1em 0;
+}
+
+footer {
+  padding: 1em 1em 0;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+footer a {
+  color: darkslategray;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
 }
 
 nav {

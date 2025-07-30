@@ -26,6 +26,9 @@ jobs:
       - name: Build step
         run: "deno task build"
 
+      - name: Store version
+        run: "deno eval 'Deno.writeTextFileSync(\"utils/version.ts\", \"export const version = \\\"${{ github.sha }}\\\"\")'"
+
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
