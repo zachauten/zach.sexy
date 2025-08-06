@@ -1,5 +1,6 @@
 import { Feed } from "feed";
 import { getPosts } from "./posts.ts";
+import { render } from "@deno/gfm";
 
 const posts = await getPosts();
 
@@ -29,12 +30,17 @@ const feed = new Feed({
 
 for (const post of posts) {
   const url = baseURL + "blog/" + post.slug;
+  const html = render(post.content, {
+    allowIframes: false,
+    baseUrl: baseURL,
+    mediaBaseUrl: baseURL + "/img/" + post.slug,
+  });
   feed.addItem({
     title: post.title,
     id: url,
     link: url,
     description: post.snippet,
-    content: post.content,
+    content: html,
     author: [author],
     date: post.published,
     image: post.image,
