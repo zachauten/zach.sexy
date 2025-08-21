@@ -1,11 +1,11 @@
-import { App, type Context, staticFiles } from "fresh";
+import { App, fsRoutes, staticFiles, type FreshContext } from "fresh";
 import { type State } from "./utils/utils.ts";
 
 export const app = new App<State>();
 
 app.use(staticFiles());
 
-app.use(async (ctx: Context<State>) => {
+app.use(async (ctx: FreshContext<State>) => {
   const before = performance.now();
   const response = await ctx.next();
   const after = performance.now();
@@ -13,4 +13,11 @@ app.use(async (ctx: Context<State>) => {
   return response;
 });
 
-app.fsRoutes();
+await fsRoutes(app, {
+  loadIsland: (path) => import(`./islands/${path}`),
+  loadRoute: (path) => import(`./routes/${path}`),
+});
+
+if (import.meta.main) {
+  await app.listen();
+}

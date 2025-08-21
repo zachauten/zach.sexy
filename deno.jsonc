@@ -20,7 +20,7 @@
     "preact": "npm:preact@^10.26.6",
     "prismjs": "npm:prismjs@1.29.0",
     "rss": "npm:rss@^1.2.2",
-    "fresh": "jsr:@fresh/core@^2.0.0-alpha.60"
+    "fresh": "jsr:@fresh/core@^2.0.0-alpha.34"
   },
   "compilerOptions": {
     "lib": [

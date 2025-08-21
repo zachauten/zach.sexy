@@ -31,7 +31,6 @@ export default function App({ Component }: PageProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <Analytics>
         <body>
           <Header />
           <main>
@@ -43,10 +42,9 @@ export default function App({ Component }: PageProps) {
             <a href={"https://github.com/zachauten/zach.sexy/tree/" + version}>
               {version.slice(0, 7)}
             </a>
-            <ServerTiming />
+            <ServerTiming/>
           </footer>
         </body>
-      </Analytics>
     </html>
   );
 }
