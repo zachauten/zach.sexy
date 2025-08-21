@@ -30,7 +30,6 @@ export default function App({ Component }: PageProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <Analytics>
         <body>
           <Header />
           <main>
@@ -44,7 +43,6 @@ export default function App({ Component }: PageProps) {
             </a>
           </footer>
         </body>
-      </Analytics>
     </html>
   );
 }
