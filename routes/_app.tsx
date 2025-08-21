@@ -2,6 +2,7 @@ import { type PageProps } from "fresh";
 import Header from "../components/Header.tsx";
 import Analytics from "../islands/Analytics.tsx";
 import { version } from "../utils/version.ts";
+import BlueSkyComments from "../islands/BlueSkyComments.tsx";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -30,11 +31,12 @@ export default function App({ Component }: PageProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <Analytics>
+      {/* <Analytics> */}
         <body>
           <Header />
           <main>
-            <Component />
+            {/* <Component /> */}
+            <BlueSkyComments did="did:plc:2espd7222jnur4ybrdpkdq4p" postCid="bafyreifc5ggcqr7cr3rjxvktlkbjthlzvooh6ndwfseeqw7knndnzrjcxa" skipFirst={true}/>
           </main>
           <footer>
             <a href="/feed/rss.xml">rss</a>
@@ -44,7 +46,7 @@ export default function App({ Component }: PageProps) {
             </a>
           </footer>
         </body>
-      </Analytics>
+      {/* </Analytics> */}
     </html>
   );
 }

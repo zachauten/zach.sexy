@@ -30,10 +30,13 @@
     "jsr:@std/toml@^1.0.3": "1.0.8",
     "jsr:@std/uuid@^1.0.7": "1.0.9",
     "jsr:@std/yaml@^1.0.5": "1.0.6",
+    "npm:@atcute/client@*": "4.0.3",
+    "npm:@atcute/client@^4.0.3": "4.0.3",
     "npm:@giscus/react@^3.1.0": "3.1.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:@opentelemetry/api@^1.9.0": "1.9.0",
     "npm:@preact/signals@^2.0.4": "2.2.1_preact@10.26.9",
     "npm:@preact/signals@^2.2.1": "2.2.1_preact@10.26.9",
+    "npm:@types/node@*": "24.2.0",
     "npm:esbuild-wasm@~0.25.5": "0.25.5",
     "npm:esbuild@~0.25.5": "0.25.5",
     "npm:feed@^4.2.2": "4.2.2",
@@ -50,6 +53,7 @@
     "npm:preact@^10.26.9": "10.26.9",
     "npm:prismjs@1.29.0": "1.29.0",
     "npm:prismjs@^1.29.0": "1.29.0",
+    "npm:react-icons@^5.5.0": "5.5.0_react@19.1.0",
     "npm:rss@^1.2.2": "1.2.2",
     "npm:sanitize-html@^2.13.0": "2.17.0"
   },
@@ -191,6 +195,29 @@
     }
   },
   "npm": {
+    "@atcute/client@4.0.3": {
+      "integrity": "sha512-RIOZWFVLca/HiPAAUDqQPOdOreCxTbL5cb+WUf5yqQOKIu5yEAP3eksinmlLmgIrlr5qVOE7brazUUzaskFCfw==",
+      "dependencies": [
+        "@atcute/identity",
+        "@atcute/lexicons"
+      ]
+    },
+    "@atcute/identity@1.0.3": {
+      "integrity": "sha512-mNMxbKHFGys03A8JXKk0KfMBzdd0vrYMzZZWjpw1nYTs0+ea6bo5S1hwqVUZxHdo1gFHSe/t63jxQIF4yL9aKw==",
+      "dependencies": [
+        "@atcute/lexicons",
+        "@badrap/valita"
+      ]
+    },
+    "@atcute/lexicons@1.1.0": {
+      "integrity": "sha512-LFqwnria78xLYb62Ri/+WwQpUTgZp2DuyolNGIIOV1dpiKhFFFh//nscHMA6IExFLQRqWDs3tTjy7zv0h3sf1Q==",
+      "dependencies": [
+        "esm-env"
+      ]
+    },
+    "@badrap/valita@0.4.6": {
+      "integrity": "sha512-4kdqcjyxo/8RQ8ayjms47HCWZIF5981oE5nIenbfThKDxWXtEHKipAOWlflpPJzZx9y/JWYQkp18Awr7VuepFg=="
+    },
     "@esbuild/aix-ppc64@0.25.5": {
       "integrity": "sha512-9o3TMmpmftaCMepOdA5k/yDw8SfInyzWWTjYTFCX3kPSDJMROQTb8jg+h9Cnwnmm1vOzvxN7gIfB5V2ewpjtGA==",
       "os": ["aix"],
@@ -346,6 +373,12 @@
         "preact"
       ]
     },
+    "@types/node@24.2.0": {
+      "integrity": "sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
     "@types/trusted-types@2.0.7": {
       "integrity": "sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw=="
     },
@@ -421,6 +454,9 @@
     },
     "escape-string-regexp@4.0.0": {
       "integrity": "sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA=="
+    },
+    "esm-env@1.2.2": {
+      "integrity": "sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA=="
     },
     "feed@4.2.2": {
       "integrity": "sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==",
@@ -562,6 +598,12 @@
         "scheduler"
       ]
     },
+    "react-icons@5.5.0_react@19.1.0": {
+      "integrity": "sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==",
+      "dependencies": [
+        "react"
+      ]
+    },
     "react@19.1.0": {
       "integrity": "sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg=="
     },
@@ -596,6 +638,9 @@
     "source-map-js@1.2.1": {
       "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="
     },
+    "undici-types@7.10.0": {
+      "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag=="
+    },
     "xml-js@1.6.11": {
       "integrity": "sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==",
       "dependencies": [
@@ -627,12 +672,14 @@
       "jsr:@std/dotenv@~0.225.3",
       "jsr:@std/front-matter@^1.0.8",
       "jsr:@std/path@^1.0.8",
+      "npm:@atcute/client@^4.0.3",
       "npm:@giscus/react@^3.1.0",
       "npm:@preact/signals@^2.0.4",
       "npm:feed@^4.2.2",
       "npm:marked-smartypants@^1.1.9",
       "npm:preact@^10.26.6",
       "npm:prismjs@1.29.0",
+      "npm:react-icons@^5.5.0",
       "npm:rss@^1.2.2"
     ]
   }
