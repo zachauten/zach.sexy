@@ -2,6 +2,7 @@ import { type PageProps } from "fresh";
 import Header from "../components/Header.tsx";
 import Analytics from "../islands/Analytics.tsx";
 import { version } from "../utils/version.ts";
+import ServerTiming from "../islands/ServerTiming.tsx";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -41,6 +42,7 @@ export default function App({ Component }: PageProps) {
             <a href={"https://github.com/zachauten/zach.sexy/tree/" + version}>
               {version.slice(0, 7)}
             </a>
+            <ServerTiming/>
           </footer>
         </body>
     </html>
