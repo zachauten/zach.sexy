@@ -1,4 +1,4 @@
-import { App, fsRoutes, staticFiles, type FreshContext } from "fresh";
+import { App, type FreshContext, fsRoutes, staticFiles } from "fresh";
 import { type State } from "./utils/utils.ts";
 
 export const app = new App<State>();
