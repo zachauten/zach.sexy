@@ -1,14 +1,13 @@
----
-title: Parameterized testing in Deno
-published: 2021-9-21
-snippet: "I'd like to share a simple function I wrote for parameterized testing in Deno."
-image: https://zach.sexy/img/denosaur-labcoat.webp
+= Parameterized testing in Deno
+:published: 2021-9-21
+:snippet: I'd like to share a simple function I wrote for parameterized testing in Deno.
+:image: denosaur-labcoat.webp
+:imagesDir: /img/parameterized_testing_deno/
 ---
 
-![a friendly brontosaurus wearing a labcoat and  holding a beaker](/img/parameterized_testing_deno/denosaur-labcoat.webp)
+image:denosaur-labcoat.webp[a friendly brontosaurus wearing a labcoat and  holding a beaker]
 
-I'd like to share a simple function I wrote for parameterized testing in
-[Deno](https://deno.land/).
+I'd like to share a simple function I wrote for parameterized testing in https://deno.land[Deno].
 
 One of the things I like about Deno is that the developers are building in a lot
 of boilerplate tooling into the runtime. This reduces a lot of the code that
@@ -17,21 +16,20 @@ easily have a dozen or so primary dependencies supporting testing, and many more
 transitive dependencies.
 
 Deno, on the other hand, only has one function related to testing in the global
-api (Deno.test, to register tests), and a
-[small handful of assertions](https://deno.land/std@0.107.0/testing) in the
+api (Deno.test, to register tests), and a https://deno.land/std@0.107.0/testing[small handful of assertions] in the
 standard library. It's all you really need, but sometimes the extras can be
 nice.
 
 Like parameterized tests. If you haven't used a test library that supports them,
 parameterized tests are basically just a syntactic sugar for running the same
-test case on different inputs. For example,
-[Jest's "each"](https://jestjs.io/blog/2018/05/29/jest-23-blazing-fast-delightful-testing#jest-each)
+test case on different inputs. For example, https://jestjs.io/blog/2018/05/29/jest-23-blazing-fast-delightful-testing#jest-each[Jest's "each"]
 function.
 
 To achieve something similar in Deno, give this a try (I called it 'each' as
 well, for lack of a better name):
 
-```typescript
+[source,typescript]
+----
 function each<T>(params: Record<string, T>, cb: (p: T) => void) {
   Object.keys(params).map((title) => {
     Deno.test(title, () => {
@@ -39,11 +37,12 @@ function each<T>(params: Record<string, T>, cb: (p: T) => void) {
     });
   });
 }
-```
+----
 
 Calling it looks like this:
 
-```typescript
+[source,typescript]
+----
 import { assertEquals } from "https://deno.land/std@0.107.0/testing/asserts.ts";
 each<[number[], number]>(
   {
@@ -57,7 +56,7 @@ each<[number[], number]>(
     assertEquals(expected, actual);
   },
 );
-```
+----
 
 Hopefully this can be helpful to someone, at least until more comprehensive
 testing features are added to the Deno runtime. You can read some of the ongoing

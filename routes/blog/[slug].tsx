@@ -1,9 +1,5 @@
 import { FreshContext } from "fresh";
-import { CSS } from "@deno/gfm";
-import "npm:prismjs@1.29.0/components/prism-typescript.js";
-import "npm:prismjs@1.29.0/components/prism-bash.js";
 import ArticleTitle from "../../components/ArticleTitle.tsx";
-import { Markdown } from "../../components/Markdown.tsx";
 import Comments from "../../islands/Comments.tsx";
 import Title from "../../components/Title.tsx";
 import Description from "../../components/Description.tsx";
@@ -19,20 +15,24 @@ export default async function PostPage(ctx: FreshContext<Post>) {
       <head>
         <style
           // deno-lint-ignore react-no-danger
-          dangerouslySetInnerHTML={{ __html: CSS }}
+          // dangerouslySetInnerHTML={{ __html: CSS }}
         />
         <meta property="og:type" content="article" key="og:type" />
         {post.image ? <meta property="og:image" content={post.image} /> : null}
-        <Canonical url={"https://zach.sexy/blog/" + post.slug} />
+        <Canonical url={"https://zach.sexy/blog/" + ctx.params.slug} />
         <Title title={post.title} />
         <Description content={post.snippet} />
       </head>
       <ArticleTitle
-        href={post.slug}
+        href={ctx.params.slug}
         date={post.published}
         title={post.title}
       />
-      <Markdown source={post.content} />
+      <article
+        class="asciidoc-body"
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{ __html: post.content as string }}
+      />
       <Comments />
     </>
   );
