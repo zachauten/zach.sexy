@@ -10,6 +10,6 @@ export default function ServerTiming() {
   });
 
   if (duration) {
-    return <p>{duration.toFixed(2)}ms</p>;
+    return <p>{duration.toFixed(0)}ms</p>;
   }
 }
