@@ -1,3 +1,15 @@
+:root {
+  --light-text: whitesmoke;
+  --dark-text: black;
+  --brand: white;
+  --accent: white;
+  --title-text-color: var(--dark-text);
+  --header-text-color: var(--dark-text);
+  --footer-text-color: var(--dark-text);
+  --header-background-color: var(--brand);
+  --footer-background-color: var(--brand);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,20 +28,33 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 728px;
   -webkit-text-size-adjust: 100%;
 }
 
 main {
+  margin: 0 auto;
+  max-width: 780px;
   padding: 1em;
   flex-grow: 1; /* Lets the main element grow to force the footer to the bottom. */
 }
 
+main a {
+  color: var(--title-text-color);
+}
+
 header {
   padding: 1em 1em 0;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  min-height: 128px;
 }
 
 footer {
+  min-height: 128px;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   padding: 1em 1em 0;
@@ -39,12 +64,14 @@ footer {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-content: center;
+  background-color: var(--footer-background-color);
 }
 
 footer * {
-  color: darkslategray;
   margin-right: 1em;
   margin-bottom: 0.5em;
+  color: var(--footer-text-color);
 }
 
 nav {
@@ -56,6 +83,7 @@ nav {
 nav a {
   margin-right: 1em;
   margin-bottom: 0.5em;
+  color: var(--header-text-color);
 }
 
 article {
