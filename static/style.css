@@ -33,7 +33,7 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 780px;
+  width: clamp(200px, 80%, 1000px);
   padding: 1em;
   flex-grow: 1; /* Lets the main element grow to force the footer to the bottom. */
 }
