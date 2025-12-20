@@ -1,4 +1,17 @@
+@media (min-width: 0px) {
+  .about-container {
+    flex-flow: column wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-container {
+    flex-flow: row nowrap;
+  }
+}
+
 :root {
+  /* Colors */
   --light-text: whitesmoke;
   --dark-text: black;
   --brand: white;
@@ -8,6 +21,9 @@
   --footer-text-color: var(--dark-text);
   --header-background-color: var(--brand);
   --footer-background-color: var(--brand);
+  /* Fonts */
+  --primary-font: Helvetica, sans-serif;
+  --secondary-font: Garamond;
 }
 
 * {
@@ -29,6 +45,7 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   -webkit-text-size-adjust: 100%;
+  min-width: 780px;
 }
 
 main {
@@ -55,7 +72,7 @@ header {
 
 footer {
   min-height: 128px;
-  font-family: Helvetica, sans-serif;
+  font-family: var(--primary-font);
   font-size: 14px;
   padding: 1em 1em 0;
   text-align: center;
@@ -75,7 +92,7 @@ footer * {
 }
 
 nav {
-  font-family: Helvetica, sans-serif;
+  font-family: var(--primary-font);
   display: inline-flex;
   flex-flow: row wrap;
 }
@@ -91,15 +108,15 @@ article {
 }
 
 article p {
-  font-family: Helvetica, sans-serif;
+  font-family: var(--primary-font);
   padding-bottom: 15px;
 }
 
 time {
-  font-family: Helvetica, sans-serif;
+  font-family: var(--primary-font);
 }
 
-img {
+article img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -111,4 +128,23 @@ img {
 
 .title h1 {
   font-size: 1.5em;
+  font-family: var(--secondary-font);
+}
+
+.about-container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.about-container p {
+  min-width: 250px;
+  font-size: 28px;
+  font-family: var(--secondary-font);
+}
+
+.about-img {
+  flex-shrink: 0;
+  height: 600px;
+  margin: auto 20px;
 }
