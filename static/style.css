@@ -45,13 +45,11 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   -webkit-text-size-adjust: 100%;
-  min-width: 780px;
+  width: clamp(250px, 70%, 1000px);
 }
 
 main {
-  margin: 0 auto;
-  width: clamp(200px, 80%, 1000px);
-  padding: 1em;
+  width: 100%;
   flex-grow: 1; /* Lets the main element grow to force the footer to the bottom. */
 }
 
@@ -133,18 +131,17 @@ article img {
 
 .about-container {
   display: flex;
-  flex-flow: row;
   align-items: center;
 }
 
 .about-container p {
-  min-width: 250px;
   font-size: 28px;
   font-family: var(--secondary-font);
+  width: clamp(100px, 450px, 100%);
 }
 
 .about-img {
   flex-shrink: 0;
-  height: 600px;
-  margin: auto 20px;
+  width: clamp(100px, 450px, 100%);
+  aspect-ratio: 3 / 4;
 }
