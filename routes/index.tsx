@@ -1,10 +1,7 @@
-import Title from "../components/Title.tsx";
 import Description from "../components/Description.tsx";
-import { getPosts } from "../utils/posts.ts";
-import ArticleTitle from "../components/ArticleTitle.tsx";
+import Title from "../components/Title.tsx";
 
-export default async function Home() {
-  const posts = await getPosts();
+export default function About() {
   return (
     <>
       <head>
@@ -14,20 +11,15 @@ export default async function Home() {
           content="https://zach.sexy/img/opengraph.png"
         />
         <Title title="Zach Auten" />
-        <Description content="Homepage of Zach's blog" />
+        <Description content="Zach's blog" />
       </head>
-      {posts.map((post) => {
-        return (
-          <article>
-            <ArticleTitle
-              href={"blog/" + post.slug}
-              date={post.published}
-              title={post.title}
-            />
-            <p>{post.snippet}</p>
-          </article>
-        );
-      })}
+      <div class="about-container">
+        <p>
+          Hi, I'm Zach! I am a full stack software engineer out of North
+          Carolina with a great domain name. 😄
+        </p>
+        <img class="about-img" src="/img/about/zach.avif" />
+      </div>
     </>
   );
 }
